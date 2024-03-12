@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "一言 Hitokoto 新建标签页",
     "description": "仅仅在你的新建标签页显示一句一言",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "homepage_url": "https://nexmoe.com/",
     "icons": {
 		"16": "icon16.png",
