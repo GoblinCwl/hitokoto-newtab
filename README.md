@@ -1,5 +1,6 @@
 # hitokoto-newtab
  Show only one hitokoto on your new tab page.
+ 
  此fork添加了亮/暗色切换、网页图标、一言API调用失败时的默认语句，需要下载解压，加载解压缩的扩展使用
 
 # Get
