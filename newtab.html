@@ -19,24 +19,3 @@
 <script src="app.js"></script>
 </body>
 </html>
-<script type="text/javascript">
-    const faviconLink = document.querySelector('#favicon');
-
-    window.onload = function () {
-        const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-        isDarkTheme.matches ? darkMode() : lightMode();
-        isDarkTheme.addListener(e => {
-            e.matches ? darkMode() : lightMode();
-        })
-    }
-
-    // 主题设置为深色
-    function darkMode() {
-        faviconLink.href = 'icon_white.svg';
-    }
-
-    // 主题设置为浅色
-    function lightMode() {
-        faviconLink.href = 'icon_dark.svg';
-    }
-</script>
