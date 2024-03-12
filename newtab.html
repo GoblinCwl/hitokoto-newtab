@@ -1,22 +1,42 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>New Tab</title>
-		<meta name="viewport" content="width=device-width" />
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div id="app">
-			<h1 id="hitokoto"></h1>
-            <div class="author">
-                — <span id="from_who"></span>
-                「<span id="from"></span>」
-            </div>
-		</div>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>New Tab</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link id="favicon" rel="icon" type="image/x-icon">
+</head>
+<body>
+<div id="app">
+    <h1 id="hitokoto"></h1>
+    <div class="author">
+        — <span id="from_who"></span>
+        「<span id="from"></span>」
+    </div>
+</div>
 
-        <footer>Powered by<br/><a href="https://hitokoto.cn/">Hitokoto.cn</a></footer>
-
-		<script src="app.js"></script>
-	</body>
+<script src="app.js"></script>
+</body>
 </html>
+<script type="text/javascript">
+    const faviconLink = document.querySelector('#favicon');
+
+    window.onload = function () {
+        const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+        isDarkTheme.matches ? darkMode() : lightMode();
+        isDarkTheme.addListener(e => {
+            e.matches ? darkMode() : lightMode();
+        })
+    }
+
+    // 主题设置为深色
+    function darkMode() {
+        faviconLink.href = 'icon_white.svg';
+    }
+
+    // 主题设置为浅色
+    function lightMode() {
+        faviconLink.href = 'icon_dark.svg';
+    }
+</script>
